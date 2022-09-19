@@ -8,9 +8,15 @@ Be sure to implement all the PIOT-GDA-* issues (requirements) listed at [PIOT-IN
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
+
 What does your implementation do? 
+The GatewayDeviceApp GDA is initialized. It checks if any command line arguments were passed and since we weren't passing any, it prints "INFO: Parsing 0 command line args". It starts the GDA, prints it to console on a successful start. The GDA runs for 60 seconds and then stops. It prints to the console when successfully stopped.
+
 
 How does your implementation work?
+We use `java.util.logging` for classes and interfaces of Java's core logging facilities. We create an instance of the Logger class. In the main Java method, we create an instance of the GatewayDeviceApp and call the startApp method. We then create a delay for 60 seconds, following which we call the stopApp(). We keep logging throughout the methods so that the user knows what's happening.
+
+![gda-output](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule01/labmodule01/gda.png?raw=true)
 
 ### Code Repository and Branch
 
@@ -31,9 +37,8 @@ NOTE: TA's will execute your unit tests. You only need to list each test case be
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
+- ConfigUtilTest.java
+
 
 ### Integration Tests Executed
 
@@ -42,8 +47,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
+- GatewayDeviceAppTest.java
+- SystemPerformanceManagerTest.java
 
 EOF.
