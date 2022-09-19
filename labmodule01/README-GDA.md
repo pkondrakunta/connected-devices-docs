@@ -10,7 +10,15 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+THe GatewayDeviceApp GDA is initialized. It checks if any command line arguments were passed and since we weren't passing any, it prints "INFO: Parsing 0 command line args". It starts the GDA, prints it to console on a successful start. The GDA runs for 60 seconds and then stops. It prints to the console when successfully stopped.
+
+
 How does your implementation work?
+
+We use `java.util.logging` for classes and interfaces of Java's core logging facilities. We create an instance of the Logger class. In the main Java method, we create an instance of the GatewayDeviceApp and call the startApp method. We then create a delay for 60 seconds, following which we call the stopApp(). We keep logging throughout the methods so that the user knows what's happening.
+
+![gda-output](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule01/labmodule01/gda.png?raw=true)
+
 
 ### Code Repository and Branch
 
