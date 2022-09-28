@@ -9,14 +9,16 @@ Be sure to implement all the PIOT-CDA-* issues (requirements) listed at [PIOT-IN
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
+In lab module 02, we try to get our IoT solution up and running. We try to capture system performance like memory utilization and CPU utilization. The ConstrainedDeviceApp is where the application starts and creates the instance of SystemPerformanceManager. There are two system performance task components: SystemCpuUtilTask (collects CPU utilization) and SystemMemUtilTask (system memory utilization). Both these task components are extended from the BaseSystemUtilTask. 
 
 How does your implementation work?
+We start by creating the SystemPerformanceManager and the BaseSystemUtilTask. The two task modules SystemCpuUtilTask (collects CPU utilization) and SystemMemUtilTask (system memory utilization) are extended from the BaseSystemUtilTask. We use the scheduler to check for new data at a regular intervals.
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
 
-URL: 
+URL: https://github.com/NU-Connected-Devices/cda-lab-modules-pkondrakunta/tree/labmodule02
 
 ### UML Design Diagram(s)
 
@@ -24,6 +26,7 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
+![labmodule02_cda_readme](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule02/labmodule02/labmodule02_cda_readme.png?raw=true)
 
 ### Unit Tests Executed
 
@@ -32,6 +35,8 @@ NOTE: TA's will execute your unit tests. You only need to list each test case be
 since you need to ensure you haven't introduced regressions.
 
 - ConfigUtilTest.py
+- SystemCpuUtilTaskTest.py
+- SystemMemUtilTaskTest.py
 
 ### Integration Tests Executed
 

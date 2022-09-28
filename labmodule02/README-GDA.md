@@ -10,19 +10,16 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 
 What does your implementation do? 
-The GatewayDeviceApp GDA is initialized. It checks if any command line arguments were passed and since we weren't passing any, it prints "INFO: Parsing 0 command line args". It starts the GDA, prints it to console on a successful start. The GDA runs for 60 seconds and then stops. It prints to the console when successfully stopped.
-
+In lab module 02, we try to get our IoT solution up and running. We capture system performance metrics like memory utilization and CPU utilization. The GatewayDeviceApp is where the application starts and creates the instance of SystemPerformanceManager. There are two system performance task components: SystemCpuUtilTask (collects CPU utilization) and SystemMemUtilTask (system memory utilization). Both these task components are extended from the BaseSystemUtilTask. 
 
 How does your implementation work?
-We use `java.util.logging` for classes and interfaces of Java's core logging facilities. We create an instance of the Logger class. In the main Java method, we create an instance of the GatewayDeviceApp and call the startApp method. We then create a delay for 60 seconds, following which we call the stopApp(). We keep logging throughout the methods so that the user knows what's happening.
-
-![gda-output](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule01/labmodule01/gda.png?raw=true)
+We start off by reviewing the GatewayDeviceApp, following which we create and integrate the system performance manager module. Using the Java management interface, we collect the CPU utilization. We create the system utility task modules and integrate these task modules with the system performance manager. Using a scheduler, we log information at regular intervals.
 
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
 
-URL: 
+URL: https://github.com/NU-Connected-Devices/gda-lab-modules-pkondrakunta/tree/labmodule02
 
 ### UML Design Diagram(s)
 
@@ -30,6 +27,7 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
+![labmodule02_gda_readme](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule02/labmodule02/labmodule02_gda_readme.png?raw=true)
 
 ### Unit Tests Executed
 
@@ -38,7 +36,8 @@ NOTE: TA's will execute your unit tests. You only need to list each test case be
 since you need to ensure you haven't introduced regressions.
 
 - ConfigUtilTest.java
-
+- SystemCpuUtilTaskTest.java
+- SystemMemUtilTaskTest.java
 
 ### Integration Tests Executed
 
