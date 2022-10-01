@@ -10,8 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+In labmodule03, we simulate an environment with simple sensor data that trigger actuation events. The DeviceDataManager, SensorAdapterManager and ActuatorAdapterManager play a key role in this module. The SensorAdpaterManager internally generates scheduled sensor data that are seemingly realistic. These are passed on to the DeviceDataManager which processes them and calls ActuatorAdapterManager when triggered. The ActuatorAdapterManager handles the Actuator simulation task from there on. 
 
 How does your implementation work?
+
+We create a SensorDataGenerator to generate the data that represents sensor data in real world like temperature, pressure, and humidity. We extend the BaseIotData class (which is basically a container class for component data) to create SensorData and ActuatorData which handle corresponding data. Using the BaseSensorSimTask, we create an instance of SensorData instance as well as provide a public interface to generate a new instance and access its data (HumiditySensorSimTask, TemperatureSensorSimTask, PressureSensorSimTask). These tasks can be processed by their simple sensor threshold crossings within the DeviceDataManager orchestration engine. From there, the ActuatorAdapterManager handles the actuation event using similar simulations of HumidifierActuatorSimTask and HvacActuatorSimTask (which extend BaseActuatorSimTask).
 
 ### Code Repository and Branch
 
