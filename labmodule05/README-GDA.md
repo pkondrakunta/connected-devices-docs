@@ -28,7 +28,7 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
-![labmodule05_gda_readme](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule04/labmodule04/labmodule05_gda_readme.png?raw=true)
+![labmodule05_gda_readme](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/labmodule04/labmodule05/labmodule05_gda_readme.png?raw=true)
 
 
 ### Unit Tests Executed
