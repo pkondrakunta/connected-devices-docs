@@ -14,7 +14,7 @@ How does your implementation work?
 
 We use MQTT messaging protocol to exchange IoT messages between our applications and to communicate to cloud services. In labmodule07, we are setting up the MQTT infrastructure (for the GDA) to use it in future cloud integration parts. MQTT is a publish/subscribe protocol (or a pub/sub protocol) where one will publish a message to a destination using a specific name, which is usually called a topic (or a channel). The other will subscribe to the destination system using the same topic name as the publisher. Whenever the publisher sends a message, the subscriber is notified and forwarded that message. This process is handled by a broker application that can support multiple publishers and subscribers.
 
-We install the mosquitto MQTT messaging broker and test using `mosquitto_pub` and `mosquitto_sub` to send messages. In this module we also explore the control packets of the MQTT message. Technically, there are 16 control packets but in this particular version we use 14 and all those are captured using wireshark in this module (and the next module). 
+We install the mosquitto MQTT messaging broker and test using `mosquitto_pub` and `mosquitto_sub` to send messages. In this module we also explore the control packets of the MQTT message. Technically, there are 16 control packets but in this particular version we use 14 and all those are captured using wireshark in this module. 
 
 ### Code Repository and Branch
 
