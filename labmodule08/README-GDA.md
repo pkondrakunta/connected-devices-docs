@@ -12,11 +12,16 @@ What does your implementation do?
 
 How does your implementation work?
 
+In labmodule08, we learn about request/response protocols, how they work and how to implement a CoAP server to support our application
+
+We first need to setup CoAP by installing the californium.tools package to implement the CoAP protocol. We create the CoAP server abstraction and integrate it with DeviceDataManager. We need to create resource handlers to  support data update requests and data retrieval requests. We create these handlers `GetActuatorCommandResourceHandler`, `UpdateSystemPerformanceResourceHandler` and `UpdateTelemetryResourceHandler`.
+
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
 
-URL: 
+URL: https://github.com/NU-Connected-Devices/gda-lab-modules-pkondrakunta/tree/labmodule08
 
 ### UML Design Diagram(s)
 
@@ -24,6 +29,7 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
+![labmodule05_gda_readme](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule08/labmodule08_gda.png?raw=true)
 
 ### Unit Tests Executed
 
@@ -31,9 +37,8 @@ NOTE: TA's will execute your unit tests. You only need to list each test case be
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
+- Part 01 and Part 02 tests  
+
 
 ### Integration Tests Executed
 
@@ -42,8 +47,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
+- Part 01 and Part 02 tests
+- CoapServerGatewayTest.java
 
 EOF.
