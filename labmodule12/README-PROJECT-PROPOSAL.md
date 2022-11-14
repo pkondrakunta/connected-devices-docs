@@ -29,6 +29,8 @@ All this data collected, can be referenced later to analyse the frequency of wat
 
 ## Results - Expected Outcomes 
 
-If the project was successful, we would be able to monitor the water level without the need to physically access the tank. We should be able to programmatically trigger the turn on/off of the servo motor (which is connected to the valve) remotely on demand. Furthermore, we should be able to automate using event triggers to turn off water supply after it touches 90% or 95% (or any other threshold that can be customised)
+Here are some metrics to determine the success of the project.
 
-EOF.
+* The ability to monitor the water level using a cloud dashboard (on the web/mobile) without the need to physically access the tank
+* The ability to programmatically trigger the turn on/off of the servo motor (which is connected to the valve) remotely on demand
+* THe ability to automate the turn on /off events using threshold triggers (like turn off motor when tank reaches 90% or 95%)
