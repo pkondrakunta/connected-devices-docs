@@ -24,6 +24,8 @@ NOTE: Include one or more UML designs representing your solution. It's expected 
 diagram you provide will look similar to, but not the same as, its counterpart in the
 book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
 
+![labmodule10_cda](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/labmodule10_cda.png?raw=true)
+
 
 ### Unit Tests Executed
 
@@ -45,5 +47,43 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - 
 - 
 - 
+
+
+### CDA MQTT Client Performance Test Results
+CDA: Execute the timing tests you recently created within the CDA's MqttClientPerformanceTest.
+            
+![cda_connect_disconnect](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_connect_disconnect.png?raw=true)
+
+![cda_qos0](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_qos0.png?raw=true)
+
+![cda_qos1](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_qos1.png?raw=true)
+
+![cda_qos2](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_qos2.png?raw=true)
+
+
+How long was the connect / disconnect?
+> The connect/disconnect was 5006.4 ms.
+
+For the QoS tests, include the percentage difference between each QoS level, with QoS 0 tests as the baseline. Which ran fastest? Which ran slowest?
+> QOS 0 - 0.622s. QOS 1 - 0.963s. QOS 2 -  1.178s. QOS 0 ran the fastest and QOS 2 ran the slowest. The percentage difference for QOS 1 is 54.8% and for QOS 2 is 89.2%.
+
+### 2. CDA CoAP Client Performance Test Results
+CDA: Execute the timing tests you recently created within the CDA's CoapClientPerformanceTest.
+
+![cda_coap1](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_coap1.png?raw=true)
+
+![cda_coap2](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_coap2.png?raw=true)
+
+![cda_coap3](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_coap3.png?raw=true)
+
+![cda_coap4](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule10/log_outputs/cda_coap4.png?raw=true)
+
+
+For the CON and NON tests, include the percentage difference between them, with the NON test as the baseline. Which ran fastest? Which ran slowest?
+
+> For PUT, the percentage difference was 3.73%. (NON - 10428.15ms, CON - 10817.40 ms).  For POST, the percentage difference was 0.52%. (NON - 10702.74, CON - 10758.72 ms).  
+NON was the fastest. CON was the slowest.
+
+
 
 EOF.
