@@ -12,11 +12,18 @@ What does your implementation do?
 
 How does your implementation work?
 
+In labmodule10, we put together the GDA and CDA that we have been building so far. In this module, we integrate them both and see how they work together for an IoT application. We also worked with the CoAP and MQTT protocols to communicate between the applications. 
+
+Although we run tests for these MQTT connection layers locally, this sets ground for our communication with the cloud for the future. 
+
+One of the major focus of this module is to ensure bi-directional communication between the GDA and CDA. Sending SensorData and other SystemPerformanceData to the GDA, followed by GDA's analysis of the data to take an action on the CDA side is crucial here. We worked with some encryption concepts like TLS (because security is important). Adding authentication and authorization to  our system can ensure that sensitive information will be encrypted on our network.
+
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
 
-URL: 
+URL: https://github.com/NU-Connected-Devices/cda-lab-modules-pkondrakunta/tree/labmodule10
 
 ### UML Design Diagram(s)
 
@@ -33,9 +40,6 @@ NOTE: TA's will execute your unit tests. You only need to list each test case be
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
-- 
-- 
 
 ### Integration Tests Executed
 
@@ -44,10 +48,11 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
-
+- MqttClientPerformanceTest.py
+- MqttClientConnectorTest.py
+- CoapClientPerformanceTest.py
+- DeviceDataManagerCallbackTest.py
+- DeviceDataManagerWithCommsTest.py
 
 ### CDA MQTT Client Performance Test Results
 CDA: Execute the timing tests you recently created within the CDA's MqttClientPerformanceTest.
@@ -83,7 +88,6 @@ For the CON and NON tests, include the percentage difference between them, with 
 
 > For PUT, the percentage difference was 3.73%. (NON - 10428.15ms, CON - 10817.40 ms).  For POST, the percentage difference was 0.52%. (NON - 10702.74, CON - 10758.72 ms).  
 NON was the fastest. CON was the slowest.
-
 
 
 EOF.
