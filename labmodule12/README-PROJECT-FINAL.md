@@ -66,8 +66,10 @@ All this data collected, can be referenced later to analyze the frequency of wat
 - GDA to Cloud Protocol: MQTT over TLS
 - Cloud to GDA Protocol: MQTT over TLS
 
+Only for SensorData
+- CDA to GDA Protocol: CoAP
+- GDA to CDA Protocol: CoAP
 
- 
 ### What TWO (2) cloud services / capabilities did you use (add more if you wish)?
 
 - Cloud Service 1 (data ingress - all inputs):
@@ -79,7 +81,7 @@ All this data collected, can be referenced later to analyze the frequency of wat
 
 ## Screen Shots Representing Cloud Services
 
-![cs_cda](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/cs_gda.png)
+![cs_cda](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/cs_cda.png)
 ![cs_gda](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/cs_gda.png)
 
 ### Screen Shots Representing Visualized Data
@@ -89,9 +91,12 @@ of time-series data from the CDA, and one showing an event being triggered
 that results in an actuation event sent to your GDA and then to your CDA.
 
 ![cloud_dashboard](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/cloud_dashboard.png)
+
+Before Actuation
 ![before_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/before_actuation.png)
+After Actuation
 ![after_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/after_actuation.png)
 ![gda_cda_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/gda_cda_actuation.png)
-![local_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/local_actuation.gif]
+![](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/local_actuation.gif]
 
 EOF.
