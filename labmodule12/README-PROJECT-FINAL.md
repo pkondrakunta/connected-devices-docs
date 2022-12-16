@@ -97,6 +97,6 @@ Before Actuation
 After Actuation
 ![after_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/after_actuation.png)
 ![gda_cda_actuation](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/gda_cda_actuation.png)
-![](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/local_actuation.gif]
+![](https://github.com/NU-Connected-Devices/lab-module-docs-pkondrakunta/blob/default/labmodule12/local_actuation.gif)
 
 EOF.
